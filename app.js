@@ -58,3 +58,20 @@
 //     }
 // }
 // let me = new Music("ok", "siam", "", );
+var abcd = /** @class */ (function () {
+    function abcd() {
+        this.name = "siam";
+    }
+    abcd.prototype.changeName = function () {
+        this.name;
+    };
+    return abcd;
+}());
+var BottleMaker = /** @class */ (function () {
+    function BottleMaker(name) {
+        this.name = name;
+        this.name = name;
+    }
+    return BottleMaker;
+}());
+var name1 = new BottleMaker("siam");

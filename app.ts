@@ -73,3 +73,18 @@
 //     }
 // }
 // let me = new Music("ok", "siam", "", );
+
+
+class abcd{
+    name = "siam";
+    changeName(){
+        this.name
+    }
+}
+
+class BottleMaker{
+    constructor(public name : string){
+        this.name = name;
+    }
+}
+let name1 = new BottleMaker("siam")
