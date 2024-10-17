@@ -58,20 +58,32 @@
 //     }
 // }
 // let me = new Music("ok", "siam", "", );
-var abcd = /** @class */ (function () {
-    function abcd() {
-        this.name = "siam";
-    }
-    abcd.prototype.changeName = function () {
-        this.name;
-    };
-    return abcd;
-}());
+// class abcd{
+//     name = "siam";
+//     changeName(){
+//         this.name
+//     }
+// }
+// class BottleMaker{
+//     constructor(public name : string){
+//         this.name = name;
+//     }
+// }
+// let name1 = new BottleMaker("siam")
+// public and private concept
 var BottleMaker = /** @class */ (function () {
     function BottleMaker(name) {
-        this.name = name;
         this.name = name;
     }
     return BottleMaker;
 }());
-var name1 = new BottleMaker("siam");
+var n1 = new BottleMaker("siam");
+n1.name = "arman";
+var CakeMaker = /** @class */ (function () {
+    function CakeMaker(name) {
+        this.name = name;
+    }
+    return CakeMaker;
+}());
+var c1 = new CakeMaker("pasty");
+// c1.name = "yammy" //show error

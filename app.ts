@@ -75,16 +75,31 @@
 // let me = new Music("ok", "siam", "", );
 
 
-class abcd{
-    name = "siam";
-    changeName(){
-        this.name
-    }
-}
+// class abcd{
+//     name = "siam";
+//     changeName(){
+//         this.name
+//     }
+// }
 
+// class BottleMaker{
+//     constructor(public name : string){
+//         this.name = name;
+//     }
+// }
+// let name1 = new BottleMaker("siam")
+
+
+// public and private concept
 class BottleMaker{
-    constructor(public name : string){
-        this.name = name;
-    }
+    constructor(public name : string){}
 }
-let name1 = new BottleMaker("siam")
+let n1 = new BottleMaker("siam");
+n1.name = "arman"
+
+
+class CakeMaker{
+    constructor(private name : string){}
+}
+let c1 = new CakeMaker("pasty");
+// c1.name = "yammy" //show error
