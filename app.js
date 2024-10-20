@@ -94,14 +94,31 @@
 // let b1 = new MetalBottleMaker()
 // b1.changeName()
 //optional properties class
+// class User{
+//     constructor(public readonly name:string){}
+//     changeName(){
+//         this.name = "hello"
+//     }
+// }
+// let u1 = new User("siam")
+// u1.changeName();
+// class and object parameter property
 var User = /** @class */ (function () {
-    function User(name) {
+    function User(name, age, gender) {
         this.name = name;
+        this.age = age;
+        this.gender = gender;
     }
-    User.prototype.changeName = function () {
-        this.name = "hello";
-    };
     return User;
 }());
-var u1 = new User("siam");
-u1.changeName();
+var user = new User("siam", 24, "male");
+//another way for perameter property 
+var peoples = /** @class */ (function () {
+    function peoples(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    return peoples;
+}());
+var people = new peoples("Arman", 18);
+// 

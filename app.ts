@@ -122,13 +122,33 @@
 
 
 //optional properties class
+// class User{
+//     constructor(public readonly name:string){}
+//     changeName(){
+//         this.name = "hello"
+//     }
+// }
+// let u1 = new User("siam")
+// u1.changeName();
+
+
+
+
+// class and object parameter property
 class User{
-    constructor(public readonly name:string){}
-    changeName(){
-        this.name = "hello"
+    constructor(public name:string, public age: number, public gender?:string){}
+}
+let user = new User("siam", 24, "male")
+
+//another way for perameter property 
+class peoples{
+    public name;
+    public age;
+    constructor(name:string, age:number){
+        this.name = name ;
+        this.age = age;
     }
 }
-let u1 = new User("siam")
-u1.changeName();
+let people = new peoples("Arman", 18)
 
-
+// 
