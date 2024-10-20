@@ -237,8 +237,18 @@
 
 // Generics
 //Generics function
-function logger<T>(a:T){
-    console.log(a)
+// function logger<T>(a:T){
+//     console.log(a)
+// }
+// logger<string>("siam")
+// logger<Number>(12)
+
+
+//Generic Interface
+interface Halua<T>{
+    name : string;
+    age : number;
+    key : T;
 }
-logger<string>("siam")
-logger<Number>(12)
+function abcd(obj:Halua<string>){}
+abcd({name:"foo", age:25, key:"si"})
