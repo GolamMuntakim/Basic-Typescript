@@ -180,10 +180,20 @@
 
 
 // classes and objects abstract classes
-class payment{
-    constructor(protected amount: number, protected account: number){}
-    isAmountValid(amount : number){
-        return this.amount > 0;
-    }
+// class payment{
+//     constructor(protected amount: number, protected account: number){}
+//     isAmountValid(amount : number){
+//         return this.amount > 0;
+//     }
+// }
+// class pay extends payment{}
+
+
+
+// introduction to function types
+const abcd = (name : string, cb: (value:string)=> void) =>{
+ cb("siam")
 }
-class pay extends payment{}
+abcd("siam", (value:string)=>{
+    console.log(value)
+})
