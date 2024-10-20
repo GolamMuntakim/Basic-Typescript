@@ -214,7 +214,21 @@
 
 
 // Rest parameters in functions
-function sum(...arr:number[]){
-    console.log(arr)
+// function sum(...arr:number[]){
+//     console.log(arr)
+// }
+// sum(1,2,3,4,5,6,7,8)
+
+
+
+
+// Functions overloading
+function abcd(a:string):void;
+function abcd(a:string, b:number):number;
+function abcd(a:any, b?:any){
+    if(typeof a==="string" && b===undefined){console.log("siam")}
+    if(typeof a==="string" && typeof b === "number"){return 123}
+    else throw new Error("something is wrong")
 }
-sum(1,2,3,4,5,6,7,8)
+abcd("hey")
+abcd("hey", 12)
