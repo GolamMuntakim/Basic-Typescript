@@ -107,15 +107,28 @@
 
 
 // class and object access protected modifier
-class BottleMaker{
-    public name = "siam"
-}
-class MetalBottleMaker extends BottleMaker{
-    public metarial = "metal"
+// class BottleMaker{
+//     public name = "siam"
+// }
+// class MetalBottleMaker extends BottleMaker{
+//     public metarial = "metal"
+//     changeName(){
+//         this.name = "some other name"
+//     }
+// }
+// let b1 = new MetalBottleMaker()
+// b1.changeName()
+
+
+
+//optional properties class
+class User{
+    constructor(public readonly name:string){}
     changeName(){
-        this.name = "some other name"
+        this.name = "hello"
     }
 }
-let b1 = new MetalBottleMaker()
-b1.changeName()
+let u1 = new User("siam")
+u1.changeName();
+
 

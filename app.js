@@ -4,21 +4,6 @@
 //     NOTFOUND = "not found status code 404"
 // }
 // StatusCodes.ABANDONED
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 // interface user {
 //     name : string,
 //     age : number,
@@ -97,23 +82,26 @@ var __extends = (this && this.__extends) || (function () {
 // let c1 = new CakeMaker("pasty");
 // c1.name = "yammy" //show error
 // class and object access protected modifier
-var BottleMaker = /** @class */ (function () {
-    function BottleMaker() {
-        this.name = "siam";
+// class BottleMaker{
+//     public name = "siam"
+// }
+// class MetalBottleMaker extends BottleMaker{
+//     public metarial = "metal"
+//     changeName(){
+//         this.name = "some other name"
+//     }
+// }
+// let b1 = new MetalBottleMaker()
+// b1.changeName()
+//optional properties class
+var User = /** @class */ (function () {
+    function User(name) {
+        this.name = name;
     }
-    return BottleMaker;
-}());
-var MetalBottleMaker = /** @class */ (function (_super) {
-    __extends(MetalBottleMaker, _super);
-    function MetalBottleMaker() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.metarial = "metal";
-        return _this;
-    }
-    MetalBottleMaker.prototype.changeName = function () {
-        this.name = "some other name";
+    User.prototype.changeName = function () {
+        this.name = "hello";
     };
-    return MetalBottleMaker;
-}(BottleMaker));
-var b1 = new MetalBottleMaker();
-b1.changeName();
+    return User;
+}());
+var u1 = new User("siam");
+u1.changeName();
