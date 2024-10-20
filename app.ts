@@ -223,12 +223,22 @@
 
 
 // Functions overloading
-function abcd(a:string):void;
-function abcd(a:string, b:number):number;
-function abcd(a:any, b?:any){
-    if(typeof a==="string" && b===undefined){console.log("siam")}
-    if(typeof a==="string" && typeof b === "number"){return 123}
-    else throw new Error("something is wrong")
+// function abcd(a:string):void;
+// function abcd(a:string, b:number):number;
+// function abcd(a:any, b?:any){
+//     if(typeof a==="string" && b===undefined){console.log("siam")}
+//     if(typeof a==="string" && typeof b === "number"){return 123}
+//     else throw new Error("something is wrong")
+// }
+// abcd("hey")
+// abcd("hey", 12)
+
+
+
+// Generics
+//Generics function
+function logger<T>(a:T){
+    console.log(a)
 }
-abcd("hey")
-abcd("hey", 12)
+logger<string>("siam")
+logger<Number>(12)
