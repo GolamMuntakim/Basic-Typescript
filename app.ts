@@ -135,20 +135,34 @@
 
 
 // class and object parameter property
-class User{
-    constructor(public name:string, public age: number, public gender?:string){}
-}
-let user = new User("siam", 24, "male")
+// class User{
+//     constructor(public name:string, public age: number, public gender?:string){}
+// }
+// let user = new User("siam", 24, "male")
 
 //another way for perameter property 
-class peoples{
-    public name;
-    public age;
-    constructor(name:string, age:number){
-        this.name = name ;
-        this.age = age;
+// class peoples{
+//     public name;
+//     public age;
+//     constructor(name:string, age:number){
+//         this.name = name ;
+//         this.age = age;
+//     }
+// }
+// let people = new peoples("Arman", 18)
+
+
+
+
+
+// classes and objects: Getters and setters:
+class User{
+    constructor(public _name:string, public age:number){}
+    getName(){
+        return this._name;
+    }
+    setName(value:string){
+        this._name = value;
     }
 }
-let people = new peoples("Arman", 18)
-
-// 
+let u1 = new User("siam", 24)

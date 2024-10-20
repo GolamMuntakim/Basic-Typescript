@@ -103,22 +103,32 @@
 // let u1 = new User("siam")
 // u1.changeName();
 // class and object parameter property
+// class User{
+//     constructor(public name:string, public age: number, public gender?:string){}
+// }
+// let user = new User("siam", 24, "male")
+//another way for perameter property 
+// class peoples{
+//     public name;
+//     public age;
+//     constructor(name:string, age:number){
+//         this.name = name ;
+//         this.age = age;
+//     }
+// }
+// let people = new peoples("Arman", 18)
+// classes and objects: Getters and setters:
 var User = /** @class */ (function () {
-    function User(name, age, gender) {
-        this.name = name;
+    function User(_name, age) {
+        this._name = _name;
         this.age = age;
-        this.gender = gender;
     }
+    User.prototype.getName = function () {
+        return this._name;
+    };
+    User.prototype.setName = function (value) {
+        this._name = value;
+    };
     return User;
 }());
-var user = new User("siam", 24, "male");
-//another way for perameter property 
-var peoples = /** @class */ (function () {
-    function peoples(name, age) {
-        this.name = name;
-        this.age = age;
-    }
-    return peoples;
-}());
-var people = new peoples("Arman", 18);
-// 
+var u1 = new User("siam", 24);
