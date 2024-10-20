@@ -1,11 +1,9 @@
-"use strict";
 // let  arr : [number , boolean] = [12, true]
 // enum StatusCodes {
 //     ABANDONED = "abandoned status code 500",
 //     NOTFOUND = "not found status code 404"
 // }
 // StatusCodes.ABANDONED
-Object.defineProperty(exports, "__esModule", { value: true });
 // interface user {
 //     name : string,
 //     age : number,
@@ -198,8 +196,25 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // let b1 = new BottleMaker("hey")
 // console.log(b1)
 // Modules
-var payment_1 = require("./payment");
-var payment_2 = require("./payment");
-var a = new payment_2.default("siam");
-console.log(a);
-(0, payment_1.addPayment)(12);
+// import {getDetails, addPayment} from "./payment"
+// import payment  from "./payment";
+// let a = new payment ("siam")
+// console.log(a)
+// addPayment(12);
+// Type assertion
+var a = Number("12");
+console.log(typeof a);
+// Type Guards
+function abcd(arg) {
+    if (typeof arg === "number") {
+        return "number";
+    }
+    else if (typeof arg === "string") {
+        return "string";
+    }
+    else {
+        throw new Error("nothing to do");
+    }
+}
+console.log(abcd(12));
+console.log("hello");

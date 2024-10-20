@@ -263,8 +263,26 @@
 
 
 // Modules
-import {getDetails, addPayment} from "./payment"
-import payment  from "./payment";
-let a = new payment ("siam")
-console.log(a)
-addPayment(12);
+// import {getDetails, addPayment} from "./payment"
+// import payment  from "./payment";
+// let a = new payment ("siam")
+// console.log(a)
+// addPayment(12);
+
+
+// Type assertion
+let a = Number("12")
+console.log(typeof a)
+
+// Type Guards
+function abcd(arg: string | number){
+    if(typeof arg === "number"){
+        return "number";
+    }else if(typeof arg === "string"){
+        return "string";
+    }else{
+        throw new Error("nothing to do")
+    }
+}
+console.log(abcd(12));
+console.log("hello")

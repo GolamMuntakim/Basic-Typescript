@@ -1,9 +1,9 @@
-export default class payment {
-    constructor(public name : string){}
-}
+// export default class payment {
+//     constructor(public name : string){}
+// }
 
 
-export function addPayment(val:number){
-    console.log(val)
-}
-export function getDetails(){ }
+// export function addPayment(val:number){
+//     console.log(val)
+// }
+// export function getDetails(){ }
