@@ -170,9 +170,20 @@
 
 
 // static members
-class NodeJs{
-    static version = 1.5
-    static getRandomNumber(){
-        return Math.random()
+// class NodeJs{
+//     static version = 1.5
+//     static getRandomNumber(){
+//         return Math.random()
+//     }
+// }
+
+
+
+// classes and objects abstract classes
+class payment{
+    constructor(protected amount: number, protected account: number){}
+    isAmountValid(amount : number){
+        return this.amount > 0;
     }
 }
+class pay extends payment{}

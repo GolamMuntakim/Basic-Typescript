@@ -4,6 +4,21 @@
 //     NOTFOUND = "not found status code 404"
 // }
 // StatusCodes.ABANDONED
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 // interface user {
 //     name : string,
 //     age : number,
@@ -129,12 +144,27 @@
 // }
 // let u1 = new User("siam", 24)
 // static members
-var NodeJs = /** @class */ (function () {
-    function NodeJs() {
+// class NodeJs{
+//     static version = 1.5
+//     static getRandomNumber(){
+//         return Math.random()
+//     }
+// }
+// classes and objects abstract classes
+var payment = /** @class */ (function () {
+    function payment(amount, account) {
+        this.amount = amount;
+        this.account = account;
     }
-    NodeJs.getRandomNumber = function () {
-        return Math.random();
+    payment.prototype.isAmountValid = function (amount) {
+        return this.amount > 0;
     };
-    NodeJs.version = 1.5;
-    return NodeJs;
+    return payment;
 }());
+var pay = /** @class */ (function (_super) {
+    __extends(pay, _super);
+    function pay() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return pay;
+}(payment));
