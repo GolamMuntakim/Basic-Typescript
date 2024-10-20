@@ -151,12 +151,20 @@
 //     console.log(value)
 // })
 // optional  parameter in functions
-function abcdef(name, age, gender) { }
-abcdef("siam", 24, "male");
+// function abcdef(name:string, age:number , gender?:string){}
+// abcdef("siam", 24, "male")
 // default parameter in function
-function abcd(name, age, gender) {
-    if (gender === void 0) { gender = "not to be discloused"; }
-    console.log(name, age, gender);
+// function abcd(name:string, age: number , gender : string="not to be discloused"){
+//     console.log(name, age, gender)
+// }
+// abcd("siam", 24 , "male")
+// abcd("lagbaraq", 22)
+// Rest parameters in functions
+function sum() {
+    var arr = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        arr[_i] = arguments[_i];
+    }
+    console.log(arr);
 }
-abcd("siam", 24, "male");
-abcd("lagbaraq", 22);
+sum(1, 2, 3, 4, 5, 6, 7, 8);
