@@ -118,17 +118,23 @@
 // }
 // let people = new peoples("Arman", 18)
 // classes and objects: Getters and setters:
-var User = /** @class */ (function () {
-    function User(_name, age) {
-        this._name = _name;
-        this.age = age;
+// class User{
+//     constructor(public _name:string, public age:number){}
+//     getName(){
+//         return this._name;
+//     }
+//     setName(value:string){
+//         this._name = value;
+//     }
+// }
+// let u1 = new User("siam", 24)
+// static members
+var NodeJs = /** @class */ (function () {
+    function NodeJs() {
     }
-    User.prototype.getName = function () {
-        return this._name;
+    NodeJs.getRandomNumber = function () {
+        return Math.random();
     };
-    User.prototype.setName = function (value) {
-        this._name = value;
-    };
-    return User;
+    NodeJs.version = 1.5;
+    return NodeJs;
 }());
-var u1 = new User("siam", 24);

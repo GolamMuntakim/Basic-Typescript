@@ -156,13 +156,23 @@
 
 
 // classes and objects: Getters and setters:
-class User{
-    constructor(public _name:string, public age:number){}
-    getName(){
-        return this._name;
-    }
-    setName(value:string){
-        this._name = value;
+// class User{
+//     constructor(public _name:string, public age:number){}
+//     getName(){
+//         return this._name;
+//     }
+//     setName(value:string){
+//         this._name = value;
+//     }
+// }
+// let u1 = new User("siam", 24)
+
+
+
+// static members
+class NodeJs{
+    static version = 1.5
+    static getRandomNumber(){
+        return Math.random()
     }
 }
-let u1 = new User("siam", 24)
