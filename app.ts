@@ -245,10 +245,18 @@
 
 
 //Generic Interface
-interface Halua<T>{
-    name : string;
-    age : number;
-    key : T;
+// interface Halua<T>{
+//     name : string;
+//     age : number;
+//     key : T;
+// }
+// function abcd(obj:Halua<string>){}
+// abcd({name:"foo", age:25, key:"si"})
+
+
+// classes generic
+class BottleMaker<T>{
+    constructor(public key:T){}
 }
-function abcd(obj:Halua<string>){}
-abcd({name:"foo", age:25, key:"si"})
+let b1 = new BottleMaker("hey")
+console.log(b1)
