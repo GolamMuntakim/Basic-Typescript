@@ -255,8 +255,16 @@
 
 
 // classes generic
-class BottleMaker<T>{
-    constructor(public key:T){}
-}
-let b1 = new BottleMaker("hey")
-console.log(b1)
+// class BottleMaker<T>{
+//     constructor(public key:T){}
+// }
+// let b1 = new BottleMaker("hey")
+// console.log(b1)
+
+
+// Modules
+import {getDetails, addPayment} from "./payment"
+import payment  from "./payment";
+let a = new payment ("siam")
+console.log(a)
+addPayment(12);

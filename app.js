@@ -1,9 +1,11 @@
+"use strict";
 // let  arr : [number , boolean] = [12, true]
 // enum StatusCodes {
 //     ABANDONED = "abandoned status code 500",
 //     NOTFOUND = "not found status code 404"
 // }
 // StatusCodes.ABANDONED
+Object.defineProperty(exports, "__esModule", { value: true });
 // interface user {
 //     name : string,
 //     age : number,
@@ -190,11 +192,14 @@
 // function abcd(obj:Halua<string>){}
 // abcd({name:"foo", age:25, key:"si"})
 // classes generic
-var BottleMaker = /** @class */ (function () {
-    function BottleMaker(key) {
-        this.key = key;
-    }
-    return BottleMaker;
-}());
-var b1 = new BottleMaker("hey");
-console.log(b1);
+// class BottleMaker<T>{
+//     constructor(public key:T){}
+// }
+// let b1 = new BottleMaker("hey")
+// console.log(b1)
+// Modules
+var payment_1 = require("./payment");
+var payment_2 = require("./payment");
+var a = new payment_2.default("siam");
+console.log(a);
+(0, payment_1.addPayment)(12);
