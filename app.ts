@@ -191,9 +191,22 @@
 
 
 // introduction to function types
-const abcd = (name : string, cb: (value:string)=> void) =>{
- cb("siam")
+// const abcd = (name : string, cb: (value:string)=> void) =>{
+//  cb("siam")
+// }
+// abcd("siam", (value:string)=>{
+//     console.log(value)
+// })
+
+
+
+// optional  parameter in functions
+function abcdef(name:string, age:number , gender?:string){}
+abcdef("siam", 24, "male")
+
+// default parameter in function
+function abcd(name:string, age: number , gender : string="not to be discloused"){
+    console.log(name, age, gender)
 }
-abcd("siam", (value:string)=>{
-    console.log(value)
-})
+abcd("siam", 24 , "male")
+abcd("lagbaraq", 22)

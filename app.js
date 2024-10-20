@@ -144,9 +144,19 @@
 // }
 // class pay extends payment{}
 // introduction to function types
-var abcd = function (name, cb) {
-    cb("siam");
-};
-abcd("siam", function (value) {
-    console.log(value);
-});
+// const abcd = (name : string, cb: (value:string)=> void) =>{
+//  cb("siam")
+// }
+// abcd("siam", (value:string)=>{
+//     console.log(value)
+// })
+// optional  parameter in functions
+function abcdef(name, age, gender) { }
+abcdef("siam", 24, "male");
+// default parameter in function
+function abcd(name, age, gender) {
+    if (gender === void 0) { gender = "not to be discloused"; }
+    console.log(name, age, gender);
+}
+abcd("siam", 24, "male");
+abcd("lagbaraq", 22);
