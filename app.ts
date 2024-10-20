@@ -91,15 +91,31 @@
 
 
 // public and private concept
-class BottleMaker{
-    constructor(public name : string){}
-}
-let n1 = new BottleMaker("siam");
-n1.name = "arman"
+// class BottleMaker{
+//     constructor(public name : string){}
+// }
+// let n1 = new BottleMaker("siam");
+// n1.name = "arman"
 
 
-class CakeMaker{
-    constructor(private name : string){}
-}
-let c1 = new CakeMaker("pasty");
+// class CakeMaker{
+//     constructor(private name : string){}
+// }
+// let c1 = new CakeMaker("pasty");
 // c1.name = "yammy" //show error
+
+
+
+// class and object access protected modifier
+class BottleMaker{
+    public name = "siam"
+}
+class MetalBottleMaker extends BottleMaker{
+    public metarial = "metal"
+    changeName(){
+        this.name = "some other name"
+    }
+}
+let b1 = new MetalBottleMaker()
+b1.changeName()
+
